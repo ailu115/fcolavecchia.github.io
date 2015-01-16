@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>createMarkedFile</key>
+	<false/>
+	<key>sheetClusters</key>
+	<array>
+		<array>
+			<string>dribbble.html</string>
+		</array>
+		<array>
+			<string>email.html</string>
+		</array>
+		<array>
+			<string>facebook.html</string>
+		</array>
+		<array>
+			<string>flickr.html</string>
+		</array>
+		<array>
+			<string>github.html</string>
+		</array>
+		<array>
+			<string>instagram.html</string>
+		</array>
+		<array>
+			<string>linkedin.html</string>
+		</array>
+		<array>
+			<string>pinterest.html</string>
+		</array>
+		<array>
+			<string>rss.html</string>
+		</array>
+		<array>
+			<string>stackoverflow.html</string>
+		</array>
+		<array>
+			<string>twitter.html</string>
+		</array>
+	</array>
+</dict>
+</plist>

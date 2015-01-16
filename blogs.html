@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+ <!-- About -->
+    <section id="about" class="about hidden">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>leer</h2>
+                    <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+<!-- Callout -->
+    <aside class="callout">
+        <div class="text-vertical-center">
+            <h1>leer</h1>
+        </div>
+    </aside>
+
+
+<section id="posts" class="about">
+<div class="container">
+  {% for post in site.posts %}
+  <div class="row">
+  		<div class="col-lg-12 text-center">
+            <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+   		</div>
+   	</div>
+      
+    <article class="post">          
+     	<div class="entry">
+        {{ post.content | truncatewords:40}}
+      </div>
+      
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Lee más</a>
+    </article>
+  {% endfor %}
+</section>

@@ -1,0 +1,13 @@
+.contact-section {
+    min-height: 300px;
+    width: 100%;
+    padding: 50px 0;
+    margin-top: -150px;
+    color: #666665;
+    background: url(../img/contact-bg.jpg) no-repeat center center scroll;
+    background-color: #333;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
