@@ -2,16 +2,21 @@
 layout: default
 ---
 
-<article class="post">
-  <h1>{{ page.title }}</h1>
 
-  <div class="entry">
-    {{ content }}
-  </div>
+<section id="about" class="about">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h1 class="text-lowercase">{{ page.title }}</h1>
+			</div>
+			a ver
+			{{ content }}
 
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
+		</div>
+		<div class="date">
+			Escrito el {{ page.date | date: " %e de %B de %Y" }}
+		</div>
 
-  {% include disqus.html disqus_identifier=page.disqus_identifier %}
-</article>
+	</div>
+	{% include disqus.html disqus_identifier=page.disqus_identifier %}
+</section>
