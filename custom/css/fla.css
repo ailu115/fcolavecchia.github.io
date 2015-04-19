@@ -47,5 +47,12 @@
     color: #d8d8d8;
 }
 
+.callout { 
+    background: url(../../img/palitos-18.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
 
 
