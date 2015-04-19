@@ -29,3 +29,23 @@
     width: auto ;
     overflow: hidden;
 }
+
+.bg-primary {
+    background-color:#484848;
+}
+
+.bg-secondary {
+    background-color:#D8D8D8;
+}
+
+
+ .text-primary {                                                                                                               
+    color: #484848;
+}
+
+ .btn-link {                                                                                                               
+    color: #d8d8d8;
+}
+
+
+

@@ -1,6 +1,9 @@
 ---
 layout: post
 title: mi segundo post
+category: 
+- opinion
+- foto
 ---
 
 Next you can update your site name, avatar and other options using the \_config.yml file in the root of your repository (shown below :point\_down:).
