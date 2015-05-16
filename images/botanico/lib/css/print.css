@@ -1,0 +1,44 @@
+body {
+	background-color: #FFF !important;
+	color: #000 !important;
+	}
+
+a {
+	color: #000 !important;
+	text-decoration: underline;
+	}
+
+.heading {
+	color: #000 !important;
+	}
+
+.pagination {
+	display: none;
+	}
+
+.grid {
+	background-color: transparent;
+	padding: 0;
+	width: 100% !important;
+	}
+
+.gridicon, 
+.photo {
+	border: none !important;
+	}
+
+.cellnumbers {
+	color: #EDEDED !important;
+	}
+
+.gridcell.cell-empty {
+	display: none;
+	}
+
+.drop-shadow, 
+.single-image .drop-shadow {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	}
+

@@ -2,6 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>childOrder</key>
+	<array>
+		<string>_site</string>
+		<string>old</string>
+	</array>
 	<key>createMarkedFile</key>
 	<false/>
 	<key>sheetClusters</key>
@@ -10,10 +15,10 @@
 			<string>2014-12-12-My First Post.md</string>
 		</array>
 		<array>
-			<string>2014-12-23-my-second-post.md</string>
+			<string>2015-05-14-el-sitio-de-la-bombonera-intro.md</string>
 		</array>
 		<array>
-			<string>2014-12-12-my-first-post.md</string>
+			<string>2015-05-15-el-sitio-de-la-bombonera-dia-0.md</string>
 		</array>
 	</array>
 </dict>
