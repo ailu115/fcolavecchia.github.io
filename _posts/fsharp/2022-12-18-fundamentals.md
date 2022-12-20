@@ -1,6 +1,6 @@
 ---
 layout: post
-title: F# Fundamentals - Introduction 
+title: F# Fundamentals 
 categories: 
 - Programming
 tags:
