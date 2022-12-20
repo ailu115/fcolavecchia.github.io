@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
- <link href="{{site.baseurl}}/custom/css/fla.css" rel="stylesheet">
+ <!-- <link href="{{site.baseurl}}/custom/css/fla.css" rel="stylesheet"> -->
  <!-- About -->
     <section id="about" class="about hidden">
         <div class="container">
@@ -17,8 +17,7 @@ layout: default
         </div>
         <!-- /.container -->
     </section>
-
-<!-- Callout -->
+    <!-- Callout -->
     <aside class="callout">
         <div class="text-vertical-center">
             <h1>leer</h1>
@@ -26,79 +25,21 @@ layout: default
     </aside>
 
 
-<section id="posts" class="about">
-    <div class="container text-center">
-        
-        <div class="row">
-          <div class="col">
+    <section id="posts" class="">
+        <div class="container ">
             {% for post in site.posts %}
             <div class="card">
-                <h5 class="card-header"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h5>
+                <h3 class="card-header"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
                 <div class="card-body">
-                  <h5 class="card-title">en: {% for cat in post.categories %}
+                  <h5 class="card-title text-muted">en: {% for cat in post.categories %}
                     {{cat}}
                     {% endfor %}</h5>
-                  <p class="card-text"> {{ post.content | truncatewords:40}}</p>
-                   <a href="{{ site.baseurl }}{{ post.url }}" class="read-more btn btn-primary">lee más</a>
+                  <p class="card-text"> {{ post.content | truncatewords:30}}</p>
+                  <br>
+                   <a href="{{ site.baseurl }}{{ post.url }}" class="read-more btn btn-outline ">lee más</a>
                 </div>
               </div>
               {% endfor %}
-          </div>
-         
-          <div class="col">
-            {% for post in site.posts %}
-            <div class="card">
-                <h5 class="card-header"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h5>
-                <div class="card-body">
-                  <h5 class="card-title">en: {% for cat in post.categories %}
-                    {{cat}}
-                    {% endfor %}</h5>
-                  <p class="card-text"> {{ post.content | truncatewords:40}}</p>
-                   <a href="{{ site.baseurl }}{{ post.url }}" class="read-more btn btn-primary">lee más</a>
-                </div>
-              </div>
-              {% endfor %}
-          </div>
-          <div class="col">
-            {% for post in site.posts %}
-            <div class="card">
-                <h5 class="card-header"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h5>
-                <div class="card-body">
-                  <h5 class="card-title">en: {% for cat in post.categories %}
-                    {{cat}}
-                    {% endfor %}</h5>
-                  <p class="card-text"> {{ post.content | truncatewords:40}}</p>
-                   <a href="{{ site.baseurl }}{{ post.url }}" class="read-more btn btn-primary">lee más</a>
-                </div>
-              </div>
-              {% endfor %}
-          </div>
         </div>
-      </div>
+    </section>
 
-<!-- old
-      <div class="container">
-
-  {% for post in site.posts %}
- 
-  <div class="row">
-  		<div class="col-lg-12 text-center">
-            <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-            <h4>
-            en: {% for cat in post.categories %}
-              {{cat}}
-              {% endfor %}
-            </h4>
-   		</div>
-   	</div>
-      
-    <article class="post">          
-     	<div class="entry">
-        {{ post.content | truncatewords:40}}
-      </div>
-      
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">lee más</a>
-    </article>
-  {% endfor %}
-   -->
-</section>

@@ -1,15 +1,9 @@
 
 
-h1, h2 {
-    font-family: 'Cormorant Garamond', serif;
-}
-.display-1, .dissplay-2{
-    font-family: 'Cormorant Garamond', serif;
-}
 
 .contact-section {
     min-height: 300px;
-    width: 100%;
+    width: 70%;
     padding: 50px 0;
     margin-top: -150px;
     color: #666665;

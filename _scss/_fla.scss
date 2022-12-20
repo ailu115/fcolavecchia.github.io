@@ -1,3 +1,20 @@
+ h1, h2 {
+    font-family: 'Cormorant Garamond', serif;
+}
+.display-1, .dissplay-2{
+    font-family: 'Cormorant Garamond', serif;
+} 
+
+.header h2{
+    color: $lightGray;
+    font-weight: 300;
+
+}
+
+.btn-group{
+margin: 2em 0;
+}
+
 .btn-link {                          
     font-family: $helvetica;                                           
     color: $lightGray;
@@ -5,12 +22,24 @@
 }
 .btn-link:hover{
     opacity: 0.8;
+    font-family: $helvetica; 
     background-color: $white;
     color: $darkerGray;
-    border: 2px solid $white;
+    border: 1px solid $white;
 }
 
-a {
-    color: $blue;
-    text-decoration: none;
+
+
+
+
+.about{
+    background-color: $blue;
+    // text-align: start;
+}
+
+#footer {
+    h2{
+        font-size: 48px;
+        margin-top: 0;
+    }
 }

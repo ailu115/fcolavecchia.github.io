@@ -4,7 +4,7 @@
 //
 
 // Colors
-$blue: #27456f; 
+$blue: #122A4E; 
 $lightBlue:#8D99C4;
 
 // Grays
@@ -13,7 +13,7 @@ $darkerGray: #122A4E;
 $darkGray: #545A61;
 $gray: #82858C;
 $lightGray: #EDE5E2;
-$white: rgb(241, 244, 246);
+$white:#faf8f8;
 
 // Font stacks
 $helvetica: Nunito Sans, Helvetica, Arial, sans-serif;
@@ -28,3 +28,35 @@ $georgia: Cormorant Garamond, Georgia, serif;
 }
 
 
+.blue {
+color:$blue;
+}
+
+.lightblue {
+color:$lightBlue;
+}
+
+.black {
+  color: $black;
+}
+
+.darkgray{
+  color: $darkGray;
+}
+
+.gray{
+  color: $gray;
+}
+
+.lightgray{
+  color: $lightGray;
+}
+
+.white {
+  color: $white;
+}
+
+.english {
+  font-style: italic;
+  font-weight: 300;
+}

@@ -47,16 +47,16 @@ body {
 }
 
 .btn-light {
-    border-radius: 0;
-    color: #333;
-    background-color: rgb(255,255,255);
+    border-radius: 12;
+    color: #122A4E;
+    background-color: rgba(237, 229, 226, 0.6);
 }
 
 .btn-light:hover,
 .btn-light:focus,
 .btn-light:active {
-    color: #333;
-    background-color: rgba(255,255,255,0.8);
+    color: #122A4E;
+    background-color: rgba(237, 229, 226, 0.9);
 }
 
 /* Custom Horizontal Rule */
@@ -70,12 +70,13 @@ hr.small {
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
+    top: 0;
     right: 0;
     width: 250px;
     height: 100%;
     margin-right: -250px;
     overflow-y: auto;
-    background: #222;
+    background: rgba(237, 229, 226, 0.8);
     -webkit-transition: all 0.4s ease 0s;
     -moz-transition: all 0.4s ease 0s;
     -ms-transition: all 0.4s ease 0s;
@@ -83,29 +84,39 @@ hr.small {
     transition: all 0.4s ease 0s;
 }
 
-.sidebar-nav {
+.sidebar-nav  {
     position: absolute;
-    top: 0;
+    top: 0px;
     width: 250px;
     margin: 0;
     padding: 0;
     list-style: none;
+
+    
+}
+.sidebar-nav-body{
+    top: 60px;
+    
 }
 
 .sidebar-nav li {
-    text-indent: 20px;
+    display: block;
+    /* text-indent: 80px; */
     line-height: 40px;
+    
 }
 
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #999;
+    color: #545A61;
+    margin-left: 0;
+    padding-right: 12px;
 }
 
 .sidebar-nav li a:hover {
     text-decoration: none;
-    color: #fff;
+    color: #122A4E;
     background: rgba(255,255,255,0.2);
 }
 
@@ -115,17 +126,19 @@ hr.small {
 }
 
 .sidebar-nav > .sidebar-brand {
-    height: 55px;
+    /* height: 55px; */
     font-size: 18px;
-    line-height: 55px;
+    font-weight: 700;
+    /* line-height: 55px; */
 }
 
 .sidebar-nav > .sidebar-brand a {
-    color: #999;
+    color: #122A4E;
+    margin-left: 0;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
-    color: #fff;
+    color: #122A4E;
     background: none;
 }
 
@@ -168,6 +181,7 @@ hr.small {
 
 .about {
     padding: 50px 0;
+    
 }
 
 /* Services */
@@ -237,5 +251,6 @@ hr.small {
 /* Footer */
 
 footer {
-    padding: 100px 0;
+    border-top: 2px solid #122A4E;
+    padding: 2em 0;
 }
