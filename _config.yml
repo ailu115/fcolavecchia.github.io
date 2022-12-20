@@ -49,11 +49,23 @@ baseurl: ""
 # !! You don't need to change any of the configuration flags below !!
 #
 # markdown: GFM
-markdown: kramdown
+# markdown: kramdown
 # kramdown:
 #   input: GFM
-syntax_highlighter: rouge
+#   # math_engine: mathjax
+#   syntax_highlighter: rouge
+# # highlighter: rouge
 
+
+# Conversion
+markdown:    kramdown
+highlighter: rouge
+
+# Markdown Processors
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
 
 # highlighter: pygments
 permalink: /:title/

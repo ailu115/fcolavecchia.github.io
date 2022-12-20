@@ -86,9 +86,6 @@ let b = a + 4
 ```
 
 
-    input.fsx (1,13)-(1,14) typecheck error The type 'int' does not match the type 'float'
-
-
     input.fsx (1,11)-(1,12) typecheck error The type 'int' does not match the type 'float'
 
 
