@@ -1,0 +1,16 @@
+.btn-link {                          
+    font-family: $helvetica;                                           
+    color: $lightGray;
+    border: 2px solid $lightGray;
+}
+.btn-link:hover{
+    opacity: 0.8;
+    background-color: $white;
+    color: $darkerGray;
+    border: 2px solid $white;
+}
+
+a {
+    color: $blue;
+    text-decoration: none;
+}

@@ -1,8 +1,11 @@
 
+
 h1, h2 {
     font-family: 'Cormorant Garamond', serif;
 }
-
+.display-1, .dissplay-2{
+    font-family: 'Cormorant Garamond', serif;
+}
 
 .contact-section {
     min-height: 300px;
@@ -37,7 +40,7 @@ h1, h2 {
 }
 
 .bg-primary {
-    background-color:#484848;
+    background-color:#414243;
 }
 
 .bg-secondary {
@@ -49,9 +52,12 @@ h1, h2 {
     color: #484848;
 }
 
- .btn-link {                                                                                                               
+ .btn-link {                                                                      
     color: #d8d8d8;
+    border: 1px solid #d8d8d8;
 }
+
+
 
 .callout { 
     background: url(../../img/palitos-18.jpg) no-repeat center center scroll;

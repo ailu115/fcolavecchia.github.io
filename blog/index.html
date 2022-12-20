@@ -27,8 +27,60 @@ layout: default
 
 
 <section id="posts" class="about">
-<div class="container">
+    <div class="container text-center">
+        
+        <div class="row">
+          <div class="col">
+            {% for post in site.posts %}
+            <div class="card">
+                <h5 class="card-header"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h5>
+                <div class="card-body">
+                  <h5 class="card-title">en: {% for cat in post.categories %}
+                    {{cat}}
+                    {% endfor %}</h5>
+                  <p class="card-text"> {{ post.content | truncatewords:40}}</p>
+                   <a href="{{ site.baseurl }}{{ post.url }}" class="read-more btn btn-primary">lee más</a>
+                </div>
+              </div>
+              {% endfor %}
+          </div>
+         
+          <div class="col">
+            {% for post in site.posts %}
+            <div class="card">
+                <h5 class="card-header"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h5>
+                <div class="card-body">
+                  <h5 class="card-title">en: {% for cat in post.categories %}
+                    {{cat}}
+                    {% endfor %}</h5>
+                  <p class="card-text"> {{ post.content | truncatewords:40}}</p>
+                   <a href="{{ site.baseurl }}{{ post.url }}" class="read-more btn btn-primary">lee más</a>
+                </div>
+              </div>
+              {% endfor %}
+          </div>
+          <div class="col">
+            {% for post in site.posts %}
+            <div class="card">
+                <h5 class="card-header"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h5>
+                <div class="card-body">
+                  <h5 class="card-title">en: {% for cat in post.categories %}
+                    {{cat}}
+                    {% endfor %}</h5>
+                  <p class="card-text"> {{ post.content | truncatewords:40}}</p>
+                   <a href="{{ site.baseurl }}{{ post.url }}" class="read-more btn btn-primary">lee más</a>
+                </div>
+              </div>
+              {% endfor %}
+          </div>
+        </div>
+      </div>
+
+<!-- old
+      <div class="container">
+
   {% for post in site.posts %}
+ 
   <div class="row">
   		<div class="col-lg-12 text-center">
             <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
@@ -48,4 +100,5 @@ layout: default
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">lee más</a>
     </article>
   {% endfor %}
+   -->
 </section>

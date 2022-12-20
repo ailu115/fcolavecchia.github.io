@@ -4,20 +4,21 @@
 //
 
 // Colors
-$blue: #0c2e71; 
+$blue: #27456f; 
+$lightBlue:#8D99C4;
 
 // Grays
-$black: #000d19;
-$darkerGray: #222;
-$darkGray: #333;
-$gray: #666;
-$lightGray: #eee;
-$white: #fff;
+$black: #0A1C35;
+$darkerGray: #122A4E;
+$darkGray: #545A61;
+$gray: #82858C;
+$lightGray: #EDE5E2;
+$white: rgb(241, 244, 246);
 
 // Font stacks
-$helvetica: Helvetica, Arial, sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$georgia: Georgia, serif;
+$helvetica: Nunito Sans, Helvetica, Arial, sans-serif;
+$helveticaNeue: Nunito Sans, Helvetica, Arial, sans-serif;
+$georgia: Cormorant Garamond, Georgia, serif;
 
 // Mobile breakpoints
 @mixin mobile {
@@ -25,3 +26,5 @@ $georgia: Georgia, serif;
     @content;
   }
 }
+
+
