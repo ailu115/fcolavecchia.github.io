@@ -4,24 +4,59 @@
 //
 
 // Colors
-$blue: #4183C4; 
+$blue: #122A4E; 
+$lightBlue:#8D99C4;
 
 // Grays
-$black: #000;
-$darkerGray: #222;
-$darkGray: #333;
-$gray: #666;
-$lightGray: #eee;
-$white: #fff;
+$black: #0A1C35;
+$darkerGray: #122A4E;
+$darkGray: #545A61;
+$gray: #82858C;
+$lightGray: #EDE5E2;
+$white:#faf8f8;
 
 // Font stacks
-$helvetica: Helvetica, Arial, sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$georgia: Georgia, serif;
+$helvetica: Nunito Sans, Helvetica, Arial, sans-serif;
+$helveticaNeue: Nunito Sans, Helvetica, Arial, sans-serif;
+$georgia: Cormorant Garamond, Georgia, serif;
 
 // Mobile breakpoints
 @mixin mobile {
   @media screen and (max-width: 640px) {
     @content;
   }
+}
+
+
+.blue {
+color:$blue;
+}
+
+.lightblue {
+color:$lightBlue;
+}
+
+.black {
+  color: $black;
+}
+
+.darkgray{
+  color: $darkGray;
+}
+
+.gray{
+  color: $gray;
+}
+
+.lightgray{
+  color: $lightGray;
+}
+
+.white {
+  color: $white;
+}
+
+.english {
+  font-style: italic;
+  font-weight: 300;
 }

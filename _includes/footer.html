@@ -1,73 +1,89 @@
-    
-
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>flavio colavecchia</strong>
-                    </h4>
-                    <p>bariloche, río negro<br>patagonia argentina</p>
-                    <ul class="list-unstyled">
-                        <!--
-                        <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
-                        -->
-                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:fcolavecchia@gmail.com">fcolavecchia@gmail.com</a>
-                        </li>
-                    </ul>
-                    <br>
-                    <ul id="contact" class="list-inline">
-                        <li>
-                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
-                        </li>
-                    </ul>
-                    <hr class="small">
-                    <p class="text-muted">copyright &copy; fdc 2022</p>
-                </div>
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container text-center">
+        <div class="row align-items-start-md ">
+            <div class="col-md-4 text-start">
+                <h2 class="mt-0-md">fdC</h2>
+                <h4><strong>flavio colavecchia</strong>
+                </h4>
+                
+            </div>
+            <div class="col-md-4 text-start">
+               
+                <ul class="list-unstyled">
+                    <li> <p>bariloche, río negro</li>
+                    <li> <p>patagonia argentina</p></li>
+                    <!--
+                    <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
+                    -->
+                    <li> <a href="mailto:fcolavecchia@gmail.com">fcolavecchia@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 text-start" >
+                <ul id="contact" class="list-inline">
+                    <!-- <li>
+                        <a href="#"><i class="las la-envelope fa-fw fa-2x"></i></a>
+                    </li> -->
+                    <li>
+                        <a href="#"><i class="lab la-facebook fa-fw fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="lab la-twitter fa-fw fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="lab la-dribbble fa-fw fa-2x"></i></a>
+                    </li>
+                </ul>
+            </div>
+               
             </div>
         </div>
-    </footer>
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                
+              
+                <hr class="small">
+                <p class="text-muted">copyright &copy; fdc 2022</p>
+            </div>
+        </div>
+    </div>
+</footer>
 
-    <!-- jQuery -->
-    <script src="/js/jquery.js"></script>
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/js/bootstrap.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
+<!-- Custom Theme JavaScript -->
+<script>
+// Closes the sidebar menu
+$("#menu-close").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+});
 
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
+// Opens the sidebar menu
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+});
 
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+// Scrolls to the selected menu item on the page
+$(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
 
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
             }
-        });
+        }
     });
-    </script>
+});
+</script>

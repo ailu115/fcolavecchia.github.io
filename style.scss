@@ -7,6 +7,7 @@
 
 @import "_reset";
 @import "_variables";
+
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
@@ -25,13 +26,13 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 740px;
+  max-width: 80%;
   padding: 0 10px;
   width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
+  font-family: $georgia;
   color: $darkerGray;
   font-weight: bold;
   
@@ -42,6 +43,9 @@ h1, h2, h3, h4, h5, h6 {
   @include mobile {
     line-height: 1.4;
   }
+}
+h3, h4, h5, h6 {
+  font-family: $helvetica;
 }
   
 h1 {  
@@ -69,8 +73,9 @@ p {
 }
 
 a {
+  font: $helvetica;
   color: $blue;
-  text-decoration: none;
+  text-decoration: none !important;
 	cursor: pointer;
   &:hover, &:active {
     color: $blue;
@@ -207,13 +212,16 @@ img {
 
 nav {
   float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
+  padding-top: 23px; // @TODO: Vertically middle align
   font-family: $helveticaNeue; 
   font-size: 18px;
+  background-color:  rgba(237, 229, 226, 0.6);
+
+
   
   @include mobile {
     float: none;
-    margin-top: 9px;
+    padding-top: 9px;
     display: block;
     font-size: 16px;
   }
@@ -235,6 +243,69 @@ nav {
 //
 // .main
 //
+
+#posts .card{
+  width: 90;
+  background-color: $white;
+  padding: 2em;
+  margin: 2em 5%;
+  text-align: start;
+  border-radius: 12px;
+  box-shadow:  2px 2px 14px 2px rgba(237, 229, 226, 0.6) ;
+
+  .card-header{
+    // font-family: $georgia;
+    // background-color: $gray;
+    border-bottom: solid 2px $blue;
+    font-size: 1em;
+  }
+  .card-title {
+    font-weight: 400;
+    font-size: 1em;
+    color: $lightBlue;
+  }
+  .card-text{
+    font-size: 0.7em;
+  }
+
+
+
+  
+}
+.btn-outline {
+  border: 1px solid $blue;
+}
+
+@media (min-width: 768px) { 
+
+  #posts {
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+    gap:1em;
+  }
+  .card{
+    margin: 1em 0em;
+    width: 45%;
+  
+    .card-text{
+      font-size: 0.9em;
+    }
+    
+  }
+  
+  
+  
+
+ }
+}
+
+
+
 
 .posts > .post {
   padding-bottom: 2em;
@@ -266,6 +337,16 @@ nav {
   }
 }
 
+.post-page{
+  margin-top: 80px;
+
+  .post-title {
+    border-bottom: 2px solid $blue;
+  }
+}
+
+
+
 .wrapper-footer {
   margin-top: 50px;
   border-top: 1px solid #ddd;
@@ -281,3 +362,6 @@ footer {
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "_highlights";
+
+@import "_fla"
+
