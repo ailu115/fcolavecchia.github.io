@@ -1,6 +1,6 @@
 ---
 layout: post
-title: F# So what is a function anyway?
+title: F# as your first functional programming language
 categories: 
 - Programming
 tags:
@@ -8,6 +8,7 @@ tags:
 ---
 
 ## So what is a function anyway?
+
 
 Since we are about to learn functional programming, we need to agree in what a _function_ is in this context. Let us start with a set of entities, for example, the cars parked in a given block of a street. One can identify each car by its license plate, and then build a table with two columns: the first one with the license plate, and the second one with the corresponding the color of each car:
 
@@ -32,15 +33,15 @@ $$
 f(x) = x + 1, 
 $$
 
-that is, the function that returns the value $x$ plus one. The input set (which is called the _domain_ of the function in math) is the set of all real values, $\mathbb{R}$, while the output set (the _codomain_ in math) is also $\mathbb{R}$. Using the _arrow_ notation, the complete definition of the function would be
+that is, the function that returns the value $x$ plus one. The input set (which is called the _domain_ of the function in math) is the set of all real values, $\mathbb{R}$, while the output set (the _codomain_ in math) is also $\mathbb{R}$, because adding one to any real number is also another real number. Using the _arrow_ notation, the complete definition of the function would be
 
 $$
-f: \mathbb{R} \rightarrow \mathbb{R} \; ; \;  x \mapsto x + 1 
+f: \mathbb{R} \rightarrow \mathbb{R} \; ; \;  x \mapsto x + 1,
 $$
 
-Or in english, $f$ is a function from $\mathbb{R}$ to $\mathbb{R}$ such that $f$ of $x$ is $x + 1$.
+that can be read as following: $f$ is a function from $\mathbb{R}$ to $\mathbb{R}$ such that $f$ of $x$ is $x + 1$".
 
-> 🔔 A slight detour around the codomain. The codomain is the set of entities where the function can possibly map input values. For example, in the case of the color of the cars, the codomain is simply all the possible colors. In many cases that information is too general, and it is convenient to define the _range_ of the function, which is the set of actual values of outputs the function maps inputs into. The _range_ in the cars example is the set {black, red, white}.
+> 🔔 A slight detour around the codomain. The codomain is the set of entities where the function can possibly map input values into. For example, in the case of the color of the cars, the codomain is simply the set of all the possible colors. In many cases that information is too general, and it is convenient to define the _range_ of the function, which is the set of actual values of outputs the function maps inputs into. The range in the cars example is the set {black, red, white}.
 
 ### Multiple inputs and outputs
 
@@ -48,7 +49,7 @@ Let us take the example of a vending machine. In a vending machine, products are
 The inputs of our `vendingMachine` function are the money, the letter and the number you selected, and the outputs are the product and 
 the cashback (if any). 
 
-An example from math could be a translation function, where given a point with coordinates \(x\) and $$y$$ in the plane, it returns a point with coordinates $$x+1$$ and $$y+1$$:
+An example from math could be a translation function, where given a point with coordinates \(x\) and $y$ in the plane, it returns a point with coordinates $x+1$ and $y+1$:
 
 $$
 g: \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R} \times \mathbb{R}  \; ; \;  (x,y) \mapsto (x + 1, y+1)
@@ -61,7 +62,8 @@ g(x,y) = (x+1,y+1)
 $$
 
 ### Partial application 
-When we feed a function of several input elements, we can obtain the proper output(s) items. But having many inputs opens a new possibility: what happens when one decides not to complete all the inputs? Let us find out. Let us assume that we entered a bill into the vending machine. It is clear that we will not get any product, because the machine still needs two more inputs: the letter of the shelf and the product number that we want. _After_ we complete these two inputs, we will get our treat (and cashback, if any). So, entering money only in the vending machine leads to a state where two inputs are needed and two outputs will be returned. But, this is _another function_!!!. Let us call it `vendingMachineAfterInsertBill` that receives the letter of the shelf and the product number that we want and returns the product (and cashback, if any). 
+When we feed a function of several input elements, we can obtain the proper output(s). But having many inputs opens a new possibility: what happens when one decides not to complete all the inputs? Let us find out. Let us assume that we entered a bill into the vending machine. It is clear that we will not get any product, because the machine still needs two more inputs: the letter of the shelf and the product number that we want. _After_ we complete these two inputs, we will get our treat (and cashback, if any). So, entering money only in the vending machine leads to a state where two inputs are needed and two outputs will be returned. But, this is _another function_!!!. Let us call it `vendingMachineAfterInsertBill` that receives the letter of the shelf and the product number that we want and returns the product (and cashback, if any). 
+
 Going back to the math example, let us feed the function with just the $x = 3$ value, 
 
 $$
@@ -91,7 +93,7 @@ Now we want to build a function that gives us the initial of the first name, giv
 This plumbing where the output of one function is the input of another is called _composition_. Note that it is absolutely necessary that the output of the first called function (`getFirstName`) and the input of the second one (`getInitial`) are the same kind of entity, in our case, both are first names.
 You can [see this pictures for a graphical explanation](https://mathinsight.org/function_machine_composition).
 
-Let us now look at a math example. We defined before the function $$f(x)$$ that adds one to $$x$$, for example 
+Let us now look at a math example. We defined before the function $f(x)$ that adds one to $x$, for example 
 
 $$
 f(0) = 0 + 1 = 1
@@ -121,8 +123,7 @@ If we look carefully to the last expression, it looks like composing the functio
 The F\# language implements functions in such a way that they satisfy the properties mentioned above. To define a function, the language also uses the keyword `let`:
 
 
-
-```C#
+```fsharp
 let next x =
     x + 1 
 ```
@@ -130,8 +131,7 @@ let next x =
 We defined the function named `next` that receives an argument `x`. Notice that there are no other symbols or parentheses in the function definition. The body of the function should be indented, and there is no `return` keyword at the end. The function simply returns the last expression found in its body. Clean, isn't it? 
 Using the function is easy as well:
 
-
-```C#
+```fsharp
 let one = next 0 
 let two = next (next 0)
 
@@ -147,8 +147,7 @@ Notice that there is no need to use parentheses around the argument when using a
 
 There is another way to write the computation of `two`, by using the _pipe operator_ `|>`:
 
-
-```C#
+```fsharp
 let anotherTwo =
     0 
     |> next
@@ -193,8 +192,7 @@ Here the string value `paul` is fed into the `getFirstName` function as the inpu
 
 Composition is so important in functional languages, that it has its own symbol in F\#, `>>` :
 
-
-```C#
+```fsharp
 let add2 = next >> next 
 let two' = add2 0 
 printfn "%A" two'
@@ -203,10 +201,9 @@ printfn "%A" two'
     2
 
 
-Yes, you can use the `'` symbol in a function name! Note also that we defined a _function_ `add2` by using the composition operator (no argument needed). This is equivalent to:
+Yes, you can use the `'` symbol in any identifier! (provided it is not the first character). Note also that we defined a _function_ `add2` by using the composition operator (no argument needed). This is equivalent to:
 
-
-```C#
+```fsharp
 let add2' x = 
     x
     |> next
@@ -232,7 +229,7 @@ let getInitialFromFirstName' =
 
 are equivalent. 
 
-> ❓ Think about routines, procedures or functions that maybe you have written in your language of preference. Do they behave as F\# functions? 
+> ❓ Think about routines, procedures or functions that maybe you have written in your language of preference. Do they behave as F\# functions? What are the main differences you see?
 
 > 🏋🏽 We have a function `mult2` that given a number `x` doubles that number. Without coding, can you determine what the next composite functions return when applied to 3? :
 
@@ -245,3 +242,5 @@ Code the function `mult2` and see the result by yourself.
 
 Some final remarks for now on functions. First, note that the language use the same keyword `let` to bind simple values and functions to a name or identifier. This emphasizes the fact that in F# functions are 'just' values, and can be treated in the same way as, say, a simpler binding of an expression to an identifier. 
 Second, the properties of functions that were discussed above match perfectly inmutability. In fact, functions receive immutable inputs and return an immutable value. 
+
+> Checkout [the Jupyter notebook companion of this guide](https://github.com/fcolavecchia/fp-course/blob/main/en/Functions.ipynb).

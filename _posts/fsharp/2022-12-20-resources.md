@@ -1,11 +1,13 @@
 ---
 layout: post
-title: F# Resources
+title: F# as your first functional programming language
 categories: 
 - Programming
 tags:
 - fsharp
 ---
+
+## F# Resources
 
 This is an opinionated list of web resources and books that helped me with F\#. These are books and sites I use frequently, for a more
 a complete list of resources, check [the list of the F\# Foundation](https://fsharp.org/learn/) and [the learning resources in Microsoft .NET site](https://dotnet.microsoft.com/en-us/learn/fsharp).
@@ -39,6 +41,11 @@ Scott's presentations in YouTube.
 - [Html2Feliz](https://thisfunctionaltom.github.io/Html2Feliz/) enables you to translate plain HTML into Feliz.
 
 - [SAFE Stack](https://safe-stack.github.io/docs/) is a full fledged F# framework to build web applications. It takes care of the front end, the backend and even the deployment into the Azure cloud. 
+
+
+### High performance F\# 
+
+- [Topological sort in F#](https://www.youtube.com/channel/UCnOx0OGml1t-6u_v2N0GemA) by Matthew Crews. In this fantastic series, Matthews starts with a pure functional version of a topological sort, and squeezes all the (rather advanced to me) features of F\# to speed up the code. 
 
 ### Misc stuff
 
