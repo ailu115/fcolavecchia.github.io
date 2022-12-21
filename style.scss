@@ -74,12 +74,14 @@ p {
 
 a {
   font: $helvetica;
-  color: $blue;
-  text-decoration: none !important;
+  color: $brown;
+  text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    color: $brown;
+    text-decoration: underline;
   }
+
 }
 
 ul, ol {
@@ -210,13 +212,14 @@ img {
   }
 }
 
+//Nav stykes for menu.html (horizontal menu)
 nav {
   float: right;
   padding-top: 23px; // @TODO: Vertically middle align
   font-family: $helveticaNeue; 
   font-size: 18px;
-  background-color:  rgba(237, 229, 226, 0.6);
-
+  background-color: $lightGray;
+  width: 100%;
 
   
   @include mobile {
@@ -232,12 +235,27 @@ nav {
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
+    // &:hover, &:active{
+    //   color: $blue;
+    //   text-decoration: underline;
+    //   background-color: rgba(237, 229, 226, 0);
+    // }
 
     @include mobile {
       margin: 0 10px;
       color: $blue;
     }
   }
+}
+
+.navbar-collapse {
+ a{
+  &:hover, &:active{
+    color: $blue;
+    text-decoration: underline !important;
+    background-color: rgba(237, 229, 226, 0) !important;
+  }
+}
 }
 
 //
@@ -253,6 +271,9 @@ nav {
   border-radius: 12px;
   box-shadow:  2px 2px 14px 2px rgba(237, 229, 226, 0.6) ;
 
+  a{
+    color:$blue;
+  }
   .card-header{
     // font-family: $georgia;
     // background-color: $gray;
@@ -274,7 +295,13 @@ nav {
 }
 .btn-outline {
   border: 1px solid $blue;
+  color: $blue;
+
+  &:hover, &:active{
+    background-color: $lightGray;
+  }
 }
+
 
 @media (min-width: 768px) { 
 
@@ -302,6 +329,9 @@ nav {
   
 
  }
+
+
+ 
 }
 
 
@@ -343,6 +373,10 @@ nav {
   .post-title {
     border-bottom: 2px solid $blue;
   }
+
+  // p{
+  //   font-size: 0.8em;
+  // }
 }
 
 
@@ -357,6 +391,12 @@ nav {
 footer {
   padding: 20px 0;
   text-align: center;
+
+  .social-link a{
+
+    color: $blue;
+  }
+
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS

@@ -25,13 +25,13 @@ margin: 2em 0;
     font-family: $helvetica; 
     background-color: $white;
     color: $darkerGray;
-    border: 1px solid $white;
+    border: 2px solid $white;
 }
 
 // Added by Fla
-a:link {
-    color:brown;
-}
+// a:link {
+//     color:#a52a2a;
+// }
 
 
 
@@ -46,3 +46,87 @@ a:link {
         margin-top: 0;
     }
 }
+
+
+//Code
+
+pre {
+    padding: 1em;
+    background-color:  $lightGray-60 ;
+    margin: 15px 0;
+}
+
+blockquote{
+    margin: 15px 0;
+    padding: 1.4em 1.2em; 
+    background-color: $lightGray-60;
+    border-left: 4px solid $lightBlue;
+    p{
+        margin: 0;
+    }
+}
+
+
+
+
+
+//TABLE
+
+table {
+ 
+    border-collapse: collapse;
+    width: 50%;
+    text-align: left !important;
+  
+  
+ td, th {
+    border: 1px solid $lightGray;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  tr:nth-child(even){background-color: $white;}
+  
+  tr:hover {background-color: $lightGray;}
+  
+   th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: $lightBlue;
+    color:$white;
+  }
+}
+
+@media (max-width: 768px) { 
+
+   
+    
+
+    .post-page{
+     p{
+       font-size: 0.8em;
+     }
+     pre code{
+         font-size: 0.8em;
+     }
+     blockquote{
+         font-size: 0.8em;
+     }
+    }
+ 
+     mjx-container {
+         overflow-x: scroll;
+         text-align: left;
+     }
+     table {
+  
+         width: 100%;
+ 
+         td, th {
+         font-size: 0.8em;
+         }
+ 
+     
+    }
+ }
