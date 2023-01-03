@@ -5,8 +5,6 @@
 # Name of your site (displayed in the header)
 name: Impresiones Digitales
 
-# Short bio or description (displayed in the header)
-description: de Flavio Colavecchia
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: images/flaicon.png
@@ -37,7 +35,7 @@ google_analytics:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: http://fcolavecchia.github.io
+url: https://flavio.colavecchia.net 
 
 # If you're hosting your site at a Project repository on GitHub pages 
 # (http://yourusername.github.io/repository-name)
@@ -79,9 +77,10 @@ sass:
   style: :expanded # You might prefer to minify using :compressed
 
 # Use the following plug-ins
-gems:
+plugins:
   - jemoji # Emoji please!
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-seo-tag
 
 encoding: utf-8
 
@@ -91,3 +90,31 @@ exclude:
     - Gemfile.lock
     - LICENSE
     - README.md
+#
+# SEO stuff
+#
+title: Impresiones Digitales 
+
+# A short description (e.g., A blog dedicated to reviewing cat gifs), used as part of the title tag like Ben's Awesome Site | A blog dedicated to reviewing cat gifs instead of Ben's Awesome Site | Long description about a blog dedicated to reviewing cat gifs that would be used when page.title is not defined.
+tagline: My opinions about life, the universe and everthing
+
+#- A longer description used for the description meta tag. Also used as fallback for pages that don't provide their own description, and also as part of the page's title tag if neither page.title nor site.tagline has been defined.
+# Short bio or description (displayed in the header)
+description: A written and visual record of my opinions about life, the universe and everthing
+author: 
+  picture: /images/flaicon.png
+  twitter: rucacura 
+
+twitter:
+  username: rucacura 
+  # creator: rucacura
+  card: summary
+
+social:
+  name: Flavio Colavecchia
+  links:
+    - https://twitter.com/rucacura
+    - https://www.instagram.com/flavio_bar/
+    - https://www.linkedin.com/in/flavio-d-colavecchia
+    - https://github.com/fcolavecchia
+ 
