@@ -1,6 +1,12 @@
  h1, h2 {
     font-family: 'Cormorant Garamond', serif;
+
 }
+
+h1{
+    font-size: 4.5em;
+}
+
 .display-1, .dissplay-2{
     font-family: 'Cormorant Garamond', serif;
 } 
@@ -101,7 +107,17 @@ table {
 @media (max-width: 768px) { 
 
    
+    h1{
+        font-size: 2.5em;
+    }
+
+    h2{
+        font-size: 1.8em;
+    }
     
+    // h2, h3, h4, h5, h6  
+
+
 
     .post-page{
      p{

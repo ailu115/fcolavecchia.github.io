@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<section id="about" class="post-page">
+	<div class="container ">
+		<div class="row">
+			<div class="col-12 col-lg-10 col-lg-offset-1 text-center post-title">
+				<h1 class="text-lowercase">{{ page.title }}</h1>
+			</div>
+			<div class="col-lg-10 col-lg-offset-1 text-start mt-4">
+				{{ content }}
+			</div>
+			
+			
+
+		
+		<div class="date col-12 col-lg-10 col-lg-offset-1">
+			{{ page.date | date: " %Y-%m-%d" }}
+		</div>
+		<div class="col-12 col-lg-10 col-lg-offset-1 text-center">
+				<h4 class="text-lowercase">
+				<br>
+				<a href="{{site.baseurl}}/portfolio" class="btn btn-outline">volver al blog</a></h4>
+			</div>
+		</div>
+	</div>
+	{% include disqus.html disqus_identifier=page.disqus_identifier %}
+</section>
