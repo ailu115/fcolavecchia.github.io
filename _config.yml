@@ -91,7 +91,7 @@ exclude:
     - LICENSE
     - README.md
 #
-# SEO stuff
+# SEO stuff 
 #
 title: Impresiones Digitales 
 
@@ -117,4 +117,20 @@ social:
     - https://www.instagram.com/flavio_bar/
     - https://www.linkedin.com/in/flavio-d-colavecchia
     - https://github.com/fcolavecchia
+ 
+
+
+ # Collections
+
+collections:
+
+  photography:
+    title: photography
+    output: true
+    permalink: /photography/:title/
+  # blog:
+  #   title: leer
+  #   output: true
+    
+   
  
