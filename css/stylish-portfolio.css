@@ -30,6 +30,12 @@ body {
     font-size: 4.5em;
     font-weight: 700;
 }
+/* @media (min-width: 768px) {
+    .text-vertical-center h1 {
+        font-size: 2.5em;
+    }
+} */
+
 
 /* Custom Button Styles */
 
@@ -246,6 +252,9 @@ hr.small {
     .map {
         height: 75%;
     }
+  .text-vertical-center h1 {
+        font-size: 2.5em;
+    }
 }
 
 /* Footer */
@@ -254,3 +263,4 @@ footer {
     border-top: 2px solid #122A4E;
     padding: 2em 0;
 }
+

@@ -1,31 +1,37 @@
- h1, h2 {
-    font-family: 'Cormorant Garamond', serif;
-}
-.display-1, .dissplay-2{
-    font-family: 'Cormorant Garamond', serif;
-} 
-
-.header h2{
-    color: $lightGray;
-    font-weight: 300;
-
+h1,
+h2 {
+  font-family: "Cormorant Garamond", serif;
 }
 
-.btn-group{
-margin: 2em 0;
+h1 {
+  font-size: 4.5em;
 }
 
-.btn-link {                          
-    font-family: $helvetica;                                           
-    color: $lightGray;
-    border: 2px solid $lightGray;
+.display-1,
+.dissplay-2 {
+  font-family: "Cormorant Garamond", serif;
 }
-.btn-link:hover{
-    opacity: 0.8;
-    font-family: $helvetica; 
-    background-color: $white;
-    color: $darkerGray;
-    border: 2px solid $white;
+
+.header h2 {
+  color: $lightGray;
+  font-weight: 300;
+}
+
+.btn-group {
+  margin: 2em 0;
+}
+
+.btn-link {
+  font-family: $helvetica;
+  color: $lightGray;
+  border: 2px solid $lightGray;
+}
+.btn-link:hover {
+  opacity: 0.8;
+  font-family: $helvetica;
+  background-color: $white;
+  color: $darkerGray;
+  border: 2px solid $white;
 }
 
 // Added by Fla
@@ -33,100 +39,102 @@ margin: 2em 0;
 //     color:#a52a2a;
 // }
 
-
-
-.about{
-    background-color: $blue;
-    // text-align: start;
+.about {
+  background-color: $blue;
+  // text-align: start;
 }
 
 #footer {
-    h2{
-        font-size: 48px;
-        margin-top: 0;
-    }
+  h2 {
+    font-size: 48px;
+    margin-top: 0;
+  }
 }
-
 
 //Code
 
 pre {
-    padding: 1em;
-    background-color:  $lightGray-60 ;
-    margin: 15px 0;
+  padding: 1em;
+  background-color: $lightGray-60;
+  margin: 15px 0;
 }
 
-blockquote{
-    margin: 15px 0;
-    padding: 1.4em 1.2em; 
-    background-color: $lightGray-60;
-    border-left: 4px solid $lightBlue;
-    p{
-        margin: 0;
-    }
+blockquote {
+  margin: 15px 0;
+  padding: 1.4em 1.2em;
+  background-color: $lightGray-60;
+  border-left: 4px solid $lightBlue;
+  p {
+    margin: 0;
+  }
 }
-
-
-
-
 
 //TABLE
 
 table {
- 
-    border-collapse: collapse;
-    width: 50%;
-    text-align: left !important;
-  
-  
- td, th {
+  border-collapse: collapse;
+  width: 50%;
+  text-align: left !important;
+
+  td,
+  th {
     border: 1px solid $lightGray;
     padding: 8px;
     text-align: left;
   }
-  
-  tr:nth-child(even){background-color: $white;}
-  
-  tr:hover {background-color: $lightGray;}
-  
-   th {
+
+  tr:nth-child(even) {
+    background-color: $white;
+  }
+
+  tr:hover {
+    background-color: $lightGray;
+  }
+
+  th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
     background-color: $lightBlue;
-    color:$white;
+    color: $white;
   }
 }
 
-@media (max-width: 768px) { 
 
-   
-    
 
-    .post-page{
-     p{
-       font-size: 0.8em;
-     }
-     pre code{
-         font-size: 0.8em;
-     }
-     blockquote{
-         font-size: 0.8em;
-     }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  // h2, h3, h4, h5, h6
+
+  .post-page {
+    p {
+      font-size: 0.8em;
     }
- 
-     mjx-container {
-         overflow-x: scroll;
-         text-align: left;
-     }
-     table {
-  
-         width: 100%;
- 
-         td, th {
-         font-size: 0.8em;
-         }
- 
-     
+    pre code {
+      font-size: 0.8em;
     }
- }
+    blockquote {
+      font-size: 0.8em;
+    }
+  }
+
+  mjx-container {
+    overflow-x: scroll;
+    text-align: left;
+  }
+  table {
+    width: 100%;
+
+    td,
+    th {
+      font-size: 0.8em;
+    }
+  }
+}

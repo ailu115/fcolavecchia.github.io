@@ -24,8 +24,24 @@ layout: default
         </div>
     </aside>
 
+    <section id="posts" class="">
+        <div class="container ">
+            {% for post in site.photography %}
+            <div class="card">
+                <h3 class="card-header"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+                <div class="card-body">
+                  <h5 class="card-title text-muted">{% for cat in post.categories %}
+                    {{cat}}
+                    {% endfor %}</h5>
+                  <p class="card-text"> {{ post.content | truncatewords:30}}</p>
+                  <br>
+                   <a href="{{ site.baseurl }}{{ post.url }}" class="read-more btn btn-outline ">lee más</a>
+                </div>
+              </div>
+              {% endfor %}
+        </div>
+    </section>
 
-    <!-- Portfolio -->
  <section id="portfolio" class="portfolio bg-secondary">
     <div class="container">
         <div class="row">
@@ -34,6 +50,10 @@ layout: default
                     <!-- <h2>mirar</h2> -->
                 <!-- </a> -->
                 <!-- <hr class="small"> -->
+                <!-- {% include image-gallery.html folder="/uploads/botanico" %} -->
+                
+
+                
                 <div class="row">
                     <div class="col-md-6">
                         <div class="portfolio-item">
@@ -51,7 +71,7 @@ layout: default
                     </div>
                     <div class="col-md-6">
                         <div class="portfolio-item">
-                            <a href="../images/botanico/index.html">
+                            <a href="../_photography/_posts/botanico">
                                 <img class="img-portfolio img-responsive" src="../images/botanico/photos/IMG_0993.jpg">
                             </a>
                         </div>

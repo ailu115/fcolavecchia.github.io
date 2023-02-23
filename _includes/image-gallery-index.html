@@ -1,0 +1,27 @@
+<!-- <p class="image-gallery-index">{% for item in page.galleries %}
+    <a href="/photography{{ item.url }}"
+        title="{{ item.title }}"><img src="/uploads/{{ item.image }}" />
+        <span>{{
+            item.title }}</span></a>{% endfor %}</p> -->
+<section id="posts">
+            <div class="container ">
+                {% for item in page.galleries %}
+                <div class="card text-center image-gallery-index">
+                    <a href="/photography{{ item.url }}" title="{{ item.title }}" >
+
+                    
+                   
+                    <div class="card-body">
+                        <img src="/uploads/{{ item.image }}" class="img-fluid"/>
+                      <!-- <h5 class="card-title text-muted"></h5> -->
+                      
+                      
+                     
+                    </div>
+                    <h3 class="card-header">{{ item.title }}</h3>
+                   
+                </a>
+                  </div>
+                  {% endfor %}
+            </div>
+        </section>

@@ -21,21 +21,9 @@ layout: default
 		<div class="col-12 col-lg-10 col-lg-offset-1 text-center">
 				<h4 class="text-lowercase">
 				<br>
-				<a href="{{site.baseurl}}/blog" class="btn btn-outline">volver al blog</a></h4>
+				<a href="{{site.baseurl}}/portfolio" class="btn btn-outline">volver al blog</a></h4>
 			</div>
 		</div>
 	</div>
 	{% include disqus.html disqus_identifier=page.disqus_identifier %}
-</section>
-
-<section id="portfolio" class="portfolio bg-secondary">
-    <div class="container">
-		{{content}}
-        <div class="row">
-			
-            <div class="col-lg-10 col-lg-offset-1 text-center">
-				
-			</div>
-		</div>
-	</div>
 </section>
