@@ -1,19 +1,17 @@
 ---
 layout: post
-title: F# as your first functional programming language 
+title:  Fundamentals
+tagline: These guides are oriented to those progammers interested in learning some concepts on F\# functional programming, from a practical perspective.
 categories: 
-- Programming
+- F# as your first functional programming language
 tags:
 - fsharp
 ---
 
-## Fundamentals
-
-
 
 ### In preparation for take off
 
-These guides are oriented to those progammers interested in learning some concepts on F\# functional programming, from a practical perspective. F\# is an excelent _first_ functional programming language: it is functional (of course), it has a clean and readable syntax (not a lot of fancy symbols and stuff), it is flexible (in case you need to grasp some other paradigm in the middle of your code) and it is concise enough to express your ideas with clarity. 
+F\# is an excelent _first_ functional programming language: it is functional (of course), it has a clean and readable syntax (not a lot of fancy symbols and stuff), it is flexible (in case you need to grasp some other paradigm in the middle of your code) and it is concise enough to express your ideas with clarity. 
 
 Learning a new language _and_ a new programming paradigm is a wonderful adventure. You do not need any special preparation, although I assume that the reader has some background in at least one popular language (let us say C, Python, Java or JavaScript, for example). Hope you enjoy your journey as much as I did when I started with F\# a few years ago. Rembember to code and make mistakes, for there is where the learning transforms. 
 
@@ -116,4 +114,4 @@ The perspective of a code as a long list of `let` bindings is kind of daunting. 
 
 > Checkout [the Jupyter notebook companion of this guide](https://github.com/fcolavecchia/fp-course/blob/main/en/Fundamentals.ipynb).
 
-Next, [functions]({% post_url 2022-12-20-functions %}).
+

@@ -132,5 +132,17 @@ collections:
   #   title: leer
   #   output: true
     
-   
+  fsharp:
+    output: true
+    # sort_by: date 
+    order:
+      - Intro.md
+      - Fundamentals_new.md
+      - Functions_new.md
+      - IntroToTypes_new.md
+      - DiscriminatedUnions_new.md
+      - Records_new.md 
+      - resources_new.md 
+    # permalink: /fsharp/:title/:title
+
  

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: F# as your first functional programming language
+date: 2022-12-18
 categories: 
 - Programming
 tags:
@@ -11,14 +12,14 @@ This is a guide for those who want to delve into the world of functional F#, and
 
 ## Index 
 
-- [My road to F\#]({% post_url 2022-12-20-Intro %})
-- [F# Fundamentals]({% post_url 2022-12-18-fundamentals %})
-- [So what is a function anyway?]({% post_url 2022-12-20-functions %})
+- [My road to F\#]()
+- [F# Fundamentals]()
+- [So what is a function anyway?]()
 - Types 
 - Using options 
 - Collections 
 - Bye bye `for`
-- [Resources]({% post_url 2022-12-20-resources %})
+- [Resources]()
 
 > This is a work in progress. 
 

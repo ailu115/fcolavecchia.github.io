@@ -1,16 +1,14 @@
 ---
 layout: post
-title: F# as your first functional programming language
+title:  So what is a function anyway?
+tagline: Since we are about to learn functional programming, we need to agree in what a _function_ is in this context. 
 categories: 
-- Programming
+- F# as your first functional programming language
 tags:
 - fsharp
 ---
 
-## So what is a function anyway?
-
-
-Since we are about to learn functional programming, we need to agree in what a _function_ is in this context. Let us start with a set of entities, for example, the cars parked in a given block of a street. One can identify each car by its license plate, and then build a table with two columns: the first one with the license plate, and the second one with the corresponding the color of each car:
+ Let us start with a set of entities, for example, the cars parked in a given block of a street. One can identify each car by its license plate, and then build a table with two columns: the first one with the license plate, and the second one with the corresponding the color of each car:
 
 | Lic. Plate | Color         | 
 | :----------: |:-------------:|
@@ -244,3 +242,4 @@ Some final remarks for now on functions. First, note that the language use the s
 Second, the properties of functions that were discussed above match perfectly inmutability. In fact, functions receive immutable inputs and return an immutable value. 
 
 > Checkout [the Jupyter notebook companion of this guide](https://github.com/fcolavecchia/fp-course/blob/main/en/Functions.ipynb).
+

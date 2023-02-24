@@ -1,6 +1,7 @@
 ---
 layout: post
 title: F# as your first functional programming language 
+date: 2023-01-21
 categories: 
 - Programming
 tags:
@@ -65,8 +66,6 @@ Here are some of the benefits that you get because _F# is part of the .NET_:
 - There are great tools available to develop in F#.
 - It has a huge and friendly community.
 
-
-Next, [F# Fundamentals]({% post_url 2022-12-18-fundamentals %}).
 
  
 

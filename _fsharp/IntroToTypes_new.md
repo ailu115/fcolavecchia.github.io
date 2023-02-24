@@ -1,16 +1,15 @@
 ---
 layout: post
-title: F# as your first functional programming language 
+title:  Thinking with types
+tagline: To completely define a function, you not only need to establish its behavior, but also its inputs and outputs. 
 categories: 
-- Programming
+- F# as your first functional programming language
 tags:
 - fsharp
 ---
 
 
-To completely define a function, you not only need to establish its behavior, but also its inputs and outputs. That is what _types_ are for! 
-
-## Thinking with types
+## Types in the real world
 
 We have covered the basics of functions in F\#, and defined some properties that difference them from routines or procedures in other languages. We have also seen how one can combine functions together. That is the first aspect about defining functions: how they behave, and how one can encapsulate this behavior in one or several functions that can be composed to generate results. In our example, the behavior of our `vendingMachine` is to give you some product once you provided enough money and selected your treat with a keyboard. 
 The second aspect that is _needed_ to define the function is what sort of inputs and outputs it has. Going back to our first example, one had a table that represented the function `carColor`, with the color of each car in parked in a block. A completely different function would be `carHorsePower`, where for each car in the block, you write down the horsepower. Clearly here the inputs of both functions are the same, the license plate, but the outputs are different. If our vending machine does not take paper bills but credit cards, the input will be different, but you still get your beloved chips, that is, the outputs of `vendingMachine` and the modern `vendingMachineWithCreditCard` are of the same kind, but the inputs are different.
@@ -66,7 +65,7 @@ etc.
 
 The bullet list can be long, but probably one can write it down in a page (or, maybe it is provided by your vending machine client). 
 
-It looks like one can classify the features of inputs and outputs more broadly. On one hand, the cardholder's name of a credit card and expiration dates are huge collections that can not be determined _a priori_. On the other hand, we have some features that belong to a well predefined collection (car colors, types of products). Notice also that these two kind of types can be compound together in inputs or outputs, like in the wallet model. 
+It looks like one can classify the features of inputs and outputs more broadly. On one hand, the cardholder's name of a credit card and expiration dates are huge collections that can not be determined _a priori_. On the other hand, we have some features that belong to a well predefined group of different cases (car colors, types of products). Notice also that these two kind of types can be compound together in inputs or outputs, like in the wallet model. 
 
 One of the greatest features of F\# is that provides precise ways to implement these two kind of types. In the next sections we will see how to build these inputs and outputs in F\#.
 
@@ -89,12 +88,12 @@ which, except for the use of the `let` keyword (and the fact that they are inmut
 
 If you hover your mouse over each of the values above, you can see something like this:
 
-<img src="/img/type_inference.png" alt="Type inference" width="400"/>
+<img src="img/type_inference.png" alt="Type inference" width="400"/>
 
 
 That box contains the type of the value `a` that has been _inferred_ by the compiler. Yes, when you code in a F\# supported IDE, there will be an F\# compiler digesting your code as you write it, and exploring which types are you working with. In the vast majority of the cases, the compiler guess is correct. There are some cases where it cannot infer the type from your code's context. In that case, you will see some red wiggles underlining your variable, and a warning message:
 
-<img src="/img/indeterminate_lookup.png" alt="Indeterminate lookup" width="600"/>
+<img src="img/indeterminate_lookup.png" alt="Indeterminate lookup" width="800"/>
 
 
 that says exactly that: the compiler does not know which type needs to assign to the troubled value.
@@ -118,7 +117,7 @@ let sum a b : int =
 
 A closer look at the function above leads us to another interesting notation. Hovering over `sum` we see:
 
-<img src="/img/function_types.png" alt="Function types" width="400"/>
+<img src="img/function_types.png" alt="Function types" width="300"/>
 
 The compiler says us that the function `sum` is of type 
 ```fsharp
@@ -130,6 +129,10 @@ that is, it receives two `int`s as input and returns an `int` as output. We only
 let si = 2 + 3 
 let sf = 2 + 3.0 
 ```
+
+
+    input.fsx (2,14)-(2,17) typecheck error The type 'float' does not match the type 'int'
+
 
     input.fsx (2,12)-(2,13) typecheck error The type 'float' does not match the type 'int'
 
@@ -146,7 +149,7 @@ let sumf (a:float) (b:float) : float =
 
 The parenthesis are used to associate each input value with its type. One does not need to annotate all the inputs of a function, just those ones that confuse the compiler or your fellow developer, or just you in the future. 
 
-### The `unit` type and first look to side effects
+### The `unit` type and a first contact with side effects
 
 The list of all basic types in F\# can be found [here](https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/basic-types). Beside the usual `bool`, `char`, `string` and all the various numeric numbers, there is one that is called `unit`. 
 
@@ -181,6 +184,9 @@ All the data that your code produces will be in the form of some side effect: pr
 What functional programming does is to give you all the tools to prevent _undesired_ side effects in your code, but to produce _desired_ side effects when are needed. For example, a particular function in your code will receive some inmutable inputs and produce some new outputs. Then, if one restricts the attention to that function, anything outside the world of it remains unchanged, but a new value (the output) is created. 
 
 In non-functional languages, the most common undesired side effect is to be able to change input values in a function. In most cases, these languages have the ability to pass arguments to a function as a reference (a pointer in C, for example) so one can change the values of it, which in turn will change the value of the argument variable. Or one can change the value of a global variable within a function. This makes debugging much harder, and code much difficult to mantain. 
+
+
+
 
 
 > Checkout [the Jupyter notebook companion of this guide](https://github.com/fcolavecchia/fp-course/blob/main/en/IntroToTypes.ipynb).

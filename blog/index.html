@@ -28,6 +28,22 @@ layout: default
     <section id="posts" class="">
         
         <div class="container ">
+            
+            {% for post in site.fsharp %}
+            <div class="card">
+                <h3 class="card-header"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+                <div class="card-body">
+                  <h5 class="card-title text-muted">{% for cat in post.categories %}
+                    {{cat}}
+                    {% endfor %}</h5>
+                  <p>{{ post.tagline}}</p>  
+                  <p class="card-text"> 
+                    {{ post.content | truncatewords:30}}</p>
+                  <br>
+                   <a href="{{ site.baseurl }}{{ post.url }}" class="read-more btn btn-outline ">lee más</a>
+                </div>
+              </div>
+              {% endfor %}            
             {% for post in site.posts %}
             <div class="card">
                 <h3 class="card-header"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
@@ -35,12 +51,14 @@ layout: default
                   <h5 class="card-title text-muted">{% for cat in post.categories %}
                     {{cat}}
                     {% endfor %}</h5>
-                  <p class="card-text"> {{ post.content | truncatewords:30}}</p>
+                  <p>{{ post.tagline}}</p>  
+                  <p class="card-text"> 
+                    {{ post.content | truncatewords:30}}</p>
                   <br>
                    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more btn btn-outline ">lee más</a>
                 </div>
               </div>
-              {% endfor %}
+            {% endfor %}            
         </div>
     </section>
 
