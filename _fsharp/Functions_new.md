@@ -8,6 +8,8 @@ tags:
 - fsharp
 ---
 
+
+
  Let us start with a set of entities, for example, the cars parked in a given block of a street. One can identify each car by its license plate, and then build a table with two columns: the first one with the license plate, and the second one with the corresponding the color of each car:
 
 | Lic. Plate | Color         | 
@@ -241,5 +243,8 @@ Code the function `mult2` and see the result by yourself.
 Some final remarks for now on functions. First, note that the language use the same keyword `let` to bind simple values and functions to a name or identifier. This emphasizes the fact that in F# functions are 'just' values, and can be treated in the same way as, say, a simpler binding of an expression to an identifier. 
 Second, the properties of functions that were discussed above match perfectly inmutability. In fact, functions receive immutable inputs and return an immutable value. 
 
-> Checkout [the Jupyter notebook companion of this guide](https://github.com/fcolavecchia/fp-course/blob/main/en/Functions.ipynb).
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fcolavecchia/fp-course/a107a385349457d792ad315a6b04781502ca51cb?urlpath=lab%2Ftree%2Fen%2FFunctions.ipynb)
+
+<a href="https://github.com/fcolavecchia/fp-course/blob/main/en/Functions.ipynb"><img src="https://plotly.net/img/badge-notebook.svg" alt="Notebook"></a>
+
 
