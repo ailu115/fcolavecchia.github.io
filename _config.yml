@@ -124,6 +124,12 @@ social:
 
 collections:
 
+  contact:
+    title: contact
+    output: true
+    permalink: /contact/:title/
+
+
   photography:
     title: photography
     output: true

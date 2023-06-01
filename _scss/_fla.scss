@@ -138,3 +138,246 @@ table {
     }
   }
 }
+
+
+#posts {
+  .container:before,
+  .container:after{
+    background-color: green;
+    display: none;
+  }
+
+
+
+.card{
+  width: 90;
+  background-color: $white;
+  padding: 2em;
+  margin: 2em 5%;
+  text-align: start;
+  border-radius: 12px;
+  box-shadow:  2px 2px 14px 2px rgba(237, 229, 226, 0.6) ;
+
+  a{
+    color:$blue;
+  }
+  .card-header{
+    // font-family: $georgia;
+    // background-color: $gray;
+    border-bottom: solid 2px $blue;
+    font-size: 1em;
+  }
+  .card-title {
+    font-weight: 400;
+    font-size: 1em;
+    color: $lightBlue;
+  }
+  .card-text{
+    font-size: 0.7em;
+  }
+  
+  &::before{
+    background-color: green;
+    display: none;
+  
+  }
+}
+
+  
+}
+.btn-outline {
+  border: 1px solid $blue;
+  color: $blue;
+
+  &:hover, &:active{
+    background-color: $lightGray;
+  }
+}
+
+// IMAGE GALLERY
+#posts{
+  .image-gallery-index {
+      text-align: start;
+      border-radius: 12px;
+      box-shadow:  2px 2px 14px 2px rgba(237, 229, 226, 0.6) ;
+  
+    a {
+      
+      .card-body {
+        width: 100%;
+        overflow: hidden;
+        img {
+          // margin: 2em;
+          object-fit: cover;
+          width: 100%;
+          // border-radius: 12px;
+          // display: block;
+        }
+       
+      }
+     
+      &:hover {
+        text-decoration: none;
+      }
+    
+  }
+  &:hover {
+    opacity: 0.8;
+    text-decoration: none;
+    box-shadow:  2px 2px 14px 2px rgba(237, 229, 226, 0.9) ;
+  }
+  }
+  }
+
+  .image-gallery {
+  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0;
+    gap: 1%;
+    
+
+    
+li{
+  margin: 0 0 1% 0%;
+  width: 24%;
+  text-decoration: none !important;
+  list-style-type: none;
+  height: 16rem;
+  border: solid 1px $lightBlue;
+  // background-color: $darkGray;
+
+  a {
+    text-align: center;
+    text-decoration: none !important;
+    object-fit: contain;
+    img {
+      width: 100%;
+      
+      height: 16rem;
+      object-fit: cover;
+      
+     
+  }
+}
+}
+  }
+
+  .img-gallery-single{
+    h2{
+      text-align: center;
+      margin: 1em 0 2em;
+    }
+  }
+
+  
+
+
+@media (min-width: 768px) { 
+
+  #posts {
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+    gap:1em;
+  }
+  .card{
+    margin: 1em 0em;
+    width: 45%;
+    // .card-body {
+    //   // height: 16rem;
+    // }
+  
+    .card-text{
+      font-size: 0.9em;
+    }
+    
+  }
+  
+ }
+
+}
+@media (max-width: 768px){
+  #posts .card{
+    padding: 1.2em;
+  }
+
+
+.image-gallery{
+  li{
+    width: 49%;
+  }
+}
+
+}
+@media (max-width: 480px){
+  .image-gallery{
+    li{
+      width: 99%;
+    }
+  }
+}
+
+
+
+
+.contact-img{
+  // display: table;
+  width: 100%;
+  height: 100vh;
+  background: url(../img/f-colavecchia.jpeg) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  // position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -4;
+}
+
+.contact-info{
+  // padding: 3em 2em 3em 0em;
+  // height: 100vh;
+    h1{
+      line-height: 1.2em;
+      padding-top: 1em;
+      font-size: 4em;
+    }
+}
+
+@media (max-width: 768px){
+
+  .contact-img{
+    // position: absolute;
+    width: 100%;
+    height: 60vh;
+    top:0;
+    right: 10%;
+    left: 10%;
+  }
+
+  
+
+}
+@media (max-width: 480px){
+  .contact-img{
+    // position: absolute;
+    width: 100%;
+    height: 60vh;
+    top:0;
+    right: 10%;
+    left: 10%;
+  }
+
+  .contact-info{
+    
+  }
+
+}

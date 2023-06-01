@@ -4,26 +4,27 @@ layout: default
 
 <section id="about" class="post-page">
 	<div class="container ">
-		<div class="row">
+		<div class="row m-5">
 			<div class="col-12 col-lg-10 col-lg-offset-1 text-center post-title">
 				<h1 class="text-lowercase">{{ page.title }}</h1>
 			</div>
-			<div class="col-lg-10 col-lg-offset-1 text-start mt-4">
+			<div class="col-lg-10 col-lg-offset-1 text-start mt-4 img-gallery-single">
 				{{ content }}
 			</div>
-			
-			
 
+
+		</div>
+		<div class="row mt-4 mb-4">
+			<div class="date col-12 col-lg-offset-1 text-center">
+				<p class="text-center  ">{{ page.date | date: " %Y-%m-%d" }}</p>	
+				</div>
+				<div class="col-12  col-lg-offset-1 text-center">
+	
+					<a href="{{site.baseurl}}/photography" class="text-lowercase btn btn-outline">go back</a>
+				</div>
+		</div>
+			
 		
-		<div class="date col-12 col-lg-10 col-lg-offset-1">
-			{{ page.date | date: " %Y-%m-%d" }}
-		</div>
-		<div class="col-12 col-lg-10 col-lg-offset-1 text-center">
-				<h4 class="text-lowercase">
-				<br>
-				<a href="{{site.baseurl}}/photography" class="btn btn-outline">go back</a></h4>
-			</div>
-		</div>
 	</div>
 	{% include disqus.html disqus_identifier=page.disqus_identifier %}
 </section>

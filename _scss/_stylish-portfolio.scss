@@ -214,6 +214,7 @@ hr.small {
     -o-background-size: cover;
 }
 
+
 /* Portfolio */
 
 .portfolio {
@@ -262,5 +263,7 @@ hr.small {
 footer {
     border-top: 2px solid #122A4E;
     padding: 2em 0;
+    background: #fff;
+    z-index: 10;
 }
 
